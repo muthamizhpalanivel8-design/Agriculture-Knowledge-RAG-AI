@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Knowledge RAG AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="logo">🌾</div>
+            <div>
+                <h1>AgriRAG AI</h1>
+                <p>Document-grounded agriculture assistant</p>
+            </div>
+        </div>
+
+        <label class="upload-box">
+            <span>📚 Upload agriculture documents</span>
+            <small>PDF · DOCX · TXT · PNG · JPG · WEBP</small>
+            <input id="fileInput" type="file" multiple
+                   accept=".pdf,.docx,.txt,.png,.jpg,.jpeg,.webp">
+        </label>
+
+        <button id="uploadBtn" class="primary">Process Documents</button>
+        <button id="clearBtn" class="danger">Clear Documents</button>
+
+        <div id="status" class="status">No agriculture documents indexed yet.</div>
+
+        <div class="rule">
+            <strong>🔒 Strict Agriculture RAG</strong>
+            <p>
+                Answers are generated only from relevant content retrieved
+                from your uploaded agriculture documents.
+            </p>
+        </div>
+    </aside>
+
+    <main class="chat">
+        <header>
+            <div>
+                <h2>Ask your agriculture documents</h2>
+                <p>
+                    Upload agriculture books, notes, reports, PDFs or images,
+                    then ask questions about their contents.
+                </p>
+            </div>
+        </header>
+
+        <section id="messages" class="messages">
+            <div class="welcome">
+                <div class="welcome-icon">🌱</div>
+                <h3>Welcome to Agriculture Knowledge RAG AI</h3>
+                <p>
+                    Upload your agriculture documents from the left.
+                    The assistant will answer only from the uploaded content.
+                </p>
+            </div>
+        </section>
+
+        <form id="chatForm" class="composer">
+            <input id="question" autocomplete="off"
+                   placeholder="Ask a question about your agriculture document...">
+            <button type="submit">Send ➤</button>
+        </form>
+    </main>
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
